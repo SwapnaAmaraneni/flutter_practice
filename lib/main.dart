@@ -5,7 +5,6 @@ void main() {
   runApp(const MyApp());
 }
 
-
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
@@ -15,13 +14,37 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Welcome to Flutter',
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Welcome to Flutter'),
-        ),
-        body: const Center(
-          child: Text('Hello World'),
-        ),
-      ),
+          appBar: AppBar(
+            title: Center(child: Text('Welcome to Flutter')),
+          ),
+          body: Center(
+            child: Container(
+                width: 300,
+                height: 350,
+                color: Colors.blue,
+                alignment: Alignment.center,
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Container(
+                      height: 100,
+                      width: 100,
+                      color: Colors.orange,
+                    ),
+                    Container(
+                      height: 100,
+                      width: 100,
+                      color: Colors.white,
+                    ),
+                    Container(
+                      height: 100,
+                      width: 100,
+                      color: Colors.green,
+                    )
+                  ],
+                )),
+          )),
     );
   }
 }
