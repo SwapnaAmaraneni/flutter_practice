@@ -8,8 +8,8 @@ class LoginPage extends StatefulWidget {
 }
 
 class LoginPageState extends State<LoginPage> {
-  TextEditingController _emailcontroller = new TextEditingController();
-  TextEditingController _pwdcontroller = new TextEditingController();
+  final TextEditingController _emailcontroller = TextEditingController();
+  final TextEditingController _pwdcontroller = TextEditingController();
   bool hidePassword = true;
   @override
   Widget build(BuildContext context) {
@@ -58,7 +58,7 @@ class LoginPageState extends State<LoginPage> {
         ),
         Padding(
           padding: const EdgeInsets.all(20.0),
-          child: ElevatedButton(
+          child: MaterialButton(
             onPressed: () {
               validateInputs();
             },
