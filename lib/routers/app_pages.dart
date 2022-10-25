@@ -12,12 +12,11 @@ class AppPages {
   static Map<String, WidgetBuilder> get routes {
     return {
       AppRoutes.getstart: ((context) => GetStart()),
-       AppRoutes.login: ((context) => LoginPage()),
-       AppRoutes.listview: ((context) => ListviewDemo()),
-       AppRoutes.listFirstScreen: ((context) => ListMainScreen()),
+      AppRoutes.login: ((context) => LoginPage()),
+      AppRoutes.listview: ((context) => ListviewDemo()),
+      AppRoutes.listFirstScreen: ((context) => ListMainScreen()),
 
-     /* AppRoutes.signup: ((context) => SignupScreen()),
-      AppRoutes.homePage: ((context) => Container()), */
+
     };
   }
 }

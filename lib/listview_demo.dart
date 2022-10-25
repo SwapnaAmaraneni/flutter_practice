@@ -262,9 +262,9 @@ class _ListviewDemoState extends State<ListviewDemo> {
             // final country = countryList.length;
             final country = countryList[index];
             return ListTile(            
-              trailing: Icon(Icons.add_circle),
+              trailing: Icon(Icons.flag),
                title: Text(country),
-               leading: Icon(Icons.add_road),
+               leading: Icon(Icons.flag_circle),
             );
           /*   return Card(
               elevation: 10,
