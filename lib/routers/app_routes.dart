@@ -1,6 +1,6 @@
 class AppRoutes {
   AppRoutes._();
-  static const initial = listview;
+  static const initial = listFirstScreen;
   static const String getstart = "/getstart";
   static const String login = "/loginpage";
   static const String listview = "/listviewdemo";
