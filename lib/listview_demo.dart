@@ -261,18 +261,18 @@ class _ListviewDemoState extends State<ListviewDemo> {
           itemBuilder: (context, index) {
             // final country = countryList.length;
             final country = countryList[index];
-            ListTile(
-              title: Text(country),
-              //trailing: Icon(Icons.add_circle),
-              // leading: Icon(Icons.add_road),
+            return ListTile(            
+              trailing: Icon(Icons.add_circle),
+               title: Text(country),
+               leading: Icon(Icons.add_road),
             );
-            return Card(
+          /*   return Card(
               elevation: 10,
               child: Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Center(child: Text("item $country")),
               ),
-            );
+            ); */
           }),
     );
   }

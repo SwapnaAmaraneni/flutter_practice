@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_first_project/dynamiclist.dart';
+import 'package:my_first_project/list_main_screen.dart';
+import 'package:my_first_project/main.dart';
 
 import '../get_start.dart';
 import '../listview_demo.dart';
@@ -13,7 +14,7 @@ class AppPages {
       AppRoutes.getstart: ((context) => GetStart()),
        AppRoutes.login: ((context) => LoginPage()),
        AppRoutes.listview: ((context) => ListviewDemo()),
-       AppRoutes.dynamiclistview: ((context) => MyApp()),
+       AppRoutes.listFirstScreen: ((context) => ListMainScreen()),
 
      /* AppRoutes.signup: ((context) => SignupScreen()),
       AppRoutes.homePage: ((context) => Container()), */
