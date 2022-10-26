@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'list_builder_item.dart';
+
 class ListviewDemo extends StatefulWidget {
   const ListviewDemo({super.key});
 
@@ -261,19 +263,61 @@ class _ListviewDemoState extends State<ListviewDemo> {
           itemBuilder: (context, index) {
             // final country = countryList.length;
             final country = countryList[index];
-            return ListTile(            
-              trailing: Icon(Icons.flag),
-               title: Text(country),
-               leading: Icon(Icons.flag_circle),
+
+              return DemoItem(
+              counrtyName: country,
+              //Implement the call back
+              callBackValue: (value) {
+                showAlert(value);
+              },
             );
-          /*   return Card(
+           
+          
+          }),
+    );
+  }
+
+  /*
+
+  return ListTile(
+              trailing: Icon(Icons.flag),
+              title: Text(country),
+              leading: Icon(Icons.flag_circle),
+            );
+
+              return Card(
               elevation: 10,
               child: Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Center(child: Text("item $country")),
               ),
-            ); */
-          }),
-    );
+            );
+             return GestureDetector(
+              onTap: () {
+                showAlert(country);
+              },
+              child: ListTile(
+                title: Text(country),
+                trailing: Icon(Icons.drive_eta_sharp),
+                leading: Image.network("https://i.ibb.co/hMMFXQ0/laptop.jpg"),
+              ),
+            );
+ */
+      
+  showAlert(String message, {String text = ""}) {
+    showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            title: Text(message + text),
+            actions: [
+              TextButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: Text("Ok"))
+            ],
+          );
+        });
   }
 }

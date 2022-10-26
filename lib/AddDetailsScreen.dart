@@ -24,7 +24,7 @@ class Details extends State<AddDetailsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       appBar: AppBar(title: Text("Login Screen")),
+      appBar: AppBar(title: Text("Login Screen")),
       body: Form(
         key: _formKey,
         child: Column(
@@ -85,25 +85,25 @@ class Details extends State<AddDetailsScreen> {
                   }),
             ),
             TextButton(
-                onPressed: () {
-                  if (_formKey.currentState!.validate()) {
-                    Navigator.pop(
-                      context,
-                      UserDetails(
-                          email: emailController.text,
-                          password: passwordController.text),
-                    );
-
-                  }
-                },
-                child: const Text("Submit",
+              onPressed: () {
+                if (_formKey.currentState!.validate()) {
+                  Navigator.pop(
+                    context,
+                    UserDetails(
+                        email: emailController.text,
+                        password: passwordController.text),
+                  );
+                }
+              },
+              child: const Text(
+                "Submit",
                 style: TextStyle(
                   color: Colors.white,
                 ),
-
-                ),
-                style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.blue)),
-                ),
+              ),
+              style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.blue)),
+            ),
           ],
         ),
       ),

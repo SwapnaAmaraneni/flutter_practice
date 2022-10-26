@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_first_project/routers/app_routes.dart';
 
 import 'AddDetailsScreen.dart';
 import 'list_items.dart';
@@ -9,14 +10,15 @@ void main() {
     home: ListMainScreen(),
   ));
 }
+
 class ListMainScreen extends StatefulWidget {
   const ListMainScreen({super.key});
 
   @override
   State<ListMainScreen> createState() => ListMainScreenState();
 }
-class ListMainScreenState extends State<ListMainScreen> {
 
+class ListMainScreenState extends State<ListMainScreen> {
 //empty list
   List<UserDetails> userDetailsList = [];
 
@@ -40,7 +42,7 @@ class ListMainScreenState extends State<ListMainScreen> {
           );
         },
       ),
-      floatingActionButton: FloatingActionButton(
+      /*   floatingActionButton: FloatingActionButton(
         onPressed: () async {
           final result = await Navigator.push(
             context,
@@ -50,11 +52,21 @@ class ListMainScreenState extends State<ListMainScreen> {
 
           setState(() {
             userDetailsList.add(result);
-          });
+          }
+          );
         },
         backgroundColor: Colors.blue,
         child: const Icon(Icons.add),
       ),
+     */
+      floatingActionButton: FloatingActionButton(onPressed: () {
+        Navigator.pushNamed(context, AppRoutes.listviewdemo);
+        
+      },
+       backgroundColor: Colors.blue,
+        child: const Icon(Icons.add),
+      ),
+      
     );
   }
 
@@ -75,7 +87,6 @@ class ListMainScreenState extends State<ListMainScreen> {
               )
             ],
           );
-        }); 
+        });
   }
 }
-

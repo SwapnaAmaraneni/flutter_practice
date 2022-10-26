@@ -13,7 +13,7 @@ class AppPages {
     return {
       AppRoutes.getstart: ((context) => GetStart()),
       AppRoutes.login: ((context) => LoginPage()),
-      AppRoutes.listview: ((context) => ListviewDemo()),
+      AppRoutes.listviewdemo: ((context) => ListviewDemo()),
       AppRoutes.listFirstScreen: ((context) => ListMainScreen()),
 
 
