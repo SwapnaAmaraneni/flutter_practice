@@ -1,0 +1,31 @@
+{
+    "statusCode": "200",
+    "statusMessage": "Details Updated successfully!",
+    "mpin": "",
+    "otp": "7638",
+    "roleId": "12",
+    "userId": "TSDR-KOR-JGTL",
+    "dashBoardDetails": [
+        {
+            "categoryid": "1",
+            "imagePath": "https://uat4.cgg.gov.in/blc/showContent?filename=/Uploads/SCMMS/PDFS/HCL2692213281icon-02.png&filepath=basepath",
+            "category": "UPLOAD BUILDING PLAN"
+        },
+        {
+            "categoryid": "2",
+            "imagePath": "https://uat4.cgg.gov.in/blc/showContent?filename=/Uploads/SCMMS/PDFS/HCL2692214533icon-03.png&filepath=basepath",
+            "category": "CAPTURE GEO COORDINATES"
+        },
+        {
+            "categoryid": "3",
+            "imagePath": "https://uat4.cgg.gov.in/blc/showContent?filename=/Uploads/SCMMS/PDFS/HCL2692214353icon-04.png&filepath=basepath",
+            "category": "CAPTURE STAGE WISE PHOTOGRAPHS"
+        },
+        {
+            "categoryid": "4",
+            "imagePath": "https://uat4.cgg.gov.in/blc/showContent?filename=/Uploads/SCMMS/PDFS/HCL269221478icon-05.png&filepath=basepath",
+            "category": "SEARCH BENEFICIARY"
+        }
+    ],
+    "token": "ff4CJZclH-yz0eYaOOJSCBqYMZlvDs2R"
+}
