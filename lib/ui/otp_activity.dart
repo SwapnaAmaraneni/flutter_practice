@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../shared_preferences/shared_preferences.dart';
+import 'package:lottie/lottie.dart';
 
 class OTPActivity extends StatefulWidget {
   const OTPActivity({super.key});
@@ -27,11 +28,15 @@ class _OTPActivityState extends State<OTPActivity> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset(
+
+                Lottie.asset('assets/otp_code.json'),
+              
+                
+               /*  Image.asset(
                   'assets/ghmc_logo_new.png',
                   height: 100,
                   width: 200,
-                ),
+                ), */
                 Padding(
                   padding: EdgeInsets.only(left: 30, right: 30, top: 10),
                   child: TextFormField(
@@ -83,5 +88,5 @@ Future<void> readsharedprefData(String otptextfield) async {
   final value = await SharedPreferencesClass().readTheData("otp");
 
   otptextfield = value;
-  print("read value is" + otptextfield);
+  print("read value is $otptextfield");
 }

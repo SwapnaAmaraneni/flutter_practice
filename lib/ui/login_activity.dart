@@ -98,44 +98,44 @@ class _LoginActivityState extends State<LoginActivity> {
           )),
     );
   }
-}
 
-requestLogin(BuildContext context, String mobile) async {
-  final requestUrl = ApiConstants.baseUrl + ApiConstants.loginEndpoint;
+  requestLogin(BuildContext context, String mobile) async {
+    final requestUrl = ApiConstants.baseUrl + ApiConstants.loginEndpoint;
 
-  final requestPayload = {
-    "userid": "cgg@ghmc",
-    "password": "ghmc@cgg@2018",
-    "mobile_no": mobile,
-    "macid": "02:00:00:00:00:00",
-    "imei": "5657122814bedc49",
-    "source": "GHMC"
-  };
+    final requestPayload = {
+      "userid": "cgg@ghmc",
+      "password": "ghmc@cgg@2018",
+      "mobile_no": _mobileController.text,
+      "macid": "02:00:00:00:00:00",
+      "imei": "5657122814bedc49",
+      "source": "GHMC"
+    };
 
-  final _dioObject = Dio();
-  try {
-    final _response = await _dioObject.post(requestUrl, data: requestPayload);
-    print(_response.data);
-    if (_response != null) {
-      if (_response.statusCode == 200) {
-        var status = _response.data['status'];
-        var otp = _response.data['otp'];
-        var token = _response.data['token'];
+    final _dioObject = Dio();
+    try {
+      final _response = await _dioObject.post(requestUrl, data: requestPayload);
+      print(_response.data);
+      if (_response != null) {
+        if (_response.statusCode == 200) {
+          var status = _response.data['status'];
+          var otp = _response.data['otp'];
+          var token = _response.data['token'];
 
-        print("status is $status");
-        print("token is $token");
+          print("status is $status");
+          print("token is $token");
 
-        if (status == "Success") {
-          print("OTP is $otp");
-          SharedPreferencesClass().writeTheData("otp", otp);
-          SharedPreferencesClass().writeTheData("token", token);
+          if (status == "Success") {
+            print("OTP is $otp");
+            SharedPreferencesClass().writeTheData("otp", otp);
+            SharedPreferencesClass().writeTheData("token", token);
 
-          Navigator.pushNamed(context, AppRoutes.otpactivitity);
+            Navigator.pushNamed(context, AppRoutes.otpactivitity);
+          }
         }
       }
+    } on DioError catch (e) {
+      print("error is $e");
+      print("status code is ${e.response?.statusCode}");
     }
-  } on DioError catch (e) {
-    print("error is $e");
-    print("status code is ${e.response?.statusCode}");
   }
 }
