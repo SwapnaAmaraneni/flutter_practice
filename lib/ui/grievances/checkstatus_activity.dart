@@ -14,6 +14,7 @@ autherization: null
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_myghmc/core/api_constants.dart';
+import 'package:grouped_list/grouped_list.dart';
 import '../../models/viewGrievancesmodel.dart';
 import 'checkStatusListItem.dart';
 
@@ -30,16 +31,19 @@ class _CheckStatusListState extends State<CheckStatusList> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text("Check Status")),
+        title: Text("Check Status"),
       ),
+  
       body: Container(
           child: ListView.builder(
         itemCount: _viewGrievanceModel?.viewGrievances?.length ?? 0,
         itemBuilder: (context, index) {
           final villageData = _viewGrievanceModel?.viewGrievances?[index];
           return CheckStatusListItem(details: villageData);
+
         },
-      )),
+      )
+      ),
     );
   }
 
@@ -52,7 +56,8 @@ class _CheckStatusListState extends State<CheckStatusList> {
 
   fetchTheVillageDetails() async {
 //step1: create request url with base url and endpoint
-    final requestUrl =ApiConstants.baseUrl+ApiConstants.viewGrievanceEndpoint;
+    final requestUrl =
+        ApiConstants.baseUrl + ApiConstants.viewGrievanceEndpoint;
 //step 2: create payload if request post ,put,option
     final requestPayload = {
       "mobileno": "9985074116",

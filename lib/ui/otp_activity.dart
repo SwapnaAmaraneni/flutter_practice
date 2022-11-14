@@ -29,7 +29,7 @@ class _OTPActivityState extends State<OTPActivity> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
 
-                Lottie.asset('assets/otp_code.json'),
+                Lottie.asset('assets/otp_code.json',height: 150,width: 150),
               
                 
                /*  Image.asset(

@@ -14,18 +14,10 @@ class CheckStatusListItem extends StatelessWidget {
         children: [
           category_row_component("ID", details?.id ?? ""),
           category_row_component("Category Name", details?.category ?? ""),
-         // category_row_component("Subcategory Name", details?.category ?? ""),
           category_row_component("Time stamp", details?.timestamp ?? ""),
           category_row_component("Assigned to", details?.assignedto ?? ""),
           category_row_component("Type", details?.type ?? "")
-          /*  Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text("category:  ${details?.category ?? 0}"),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text("type:  ${details?.type ?? ""}"),
-          ), */
+          
         ],
       ),
     );

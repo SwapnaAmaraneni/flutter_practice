@@ -29,6 +29,8 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+ 
+
   flutter:
     sdk: flutter
 
@@ -38,6 +40,15 @@ dependencies:
   cupertino_icons: ^1.0.2
   dio: ^4.0.6
   lottie: ^1.4.3
+  grouped_list: ^5.1.2
+  image_picker: ^0.8.6
+  group_radio_button: ^1.2.0
+  intl: ^0.17.0
+  sqflite: ^2.2.0+3
+  path_provider: ^2.0.11
+  uuid: ^3.0.6
+  provider: ^6.0.4
+  
  
 
   
