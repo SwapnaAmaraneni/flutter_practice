@@ -50,8 +50,10 @@ class CricketerListItem extends StatelessWidget {
               IconButton(
                   onPressed: () {
                     DatabaseHelper.instance
-                        .deleteDataById("Cricketers", details?.userId);
+                        .delete("Cricketers", details!.userId.toString());
                     print("delete");
+                    print("data deleted $details!.name.toString()");
+                    Navigator.pop(context);
                   },
                   icon: const Icon(
                     Icons.delete,

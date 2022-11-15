@@ -84,16 +84,16 @@ country varchar(255)
     return result.toList();
   }
 
-  Future<int> delete(String id) async {
+  Future<int> delete(String tableName,String id) async {
     Database db = await instance.database;
     return await db.delete(tableName, where: '$columnId = ?', whereArgs: [id]);
   }
 
-  deleteDataById(table, itemId) async {
+ /*  deleteDataById(table, itemId) async {
     var connection = await database;
     return await connection
         .rawDelete("delete from $table where userId=$itemId");
-  }
+  } */
   // Future<int> insertContact(Map<String, dynamic> row) async {
   //   Database? db = await instance.database;
   //   return await db.insert(tableContact, row);
